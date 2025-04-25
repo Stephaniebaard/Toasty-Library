@@ -1,7 +1,9 @@
+import "../styles/HomePage.scss";
+
 const HomePage = () => {
     return (
-      <div>
-        <h1>Home Page</h1>
+      <div className="Title">
+        <h1>Toasty Library</h1>
       
       </div>
     );
