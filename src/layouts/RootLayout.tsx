@@ -1,18 +1,14 @@
-import {Link, Outlet} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+import NavBar from "../components/NavBar/NavBar";
 
 export default function Rootlayout(){
 
     return (
         <>
-        <nav>
-            <Link to="/">Home</Link>
-            <Link to="/browse">Browse</Link>
-            <Link to="/library">My Library</Link>
-            <Link to="/favorites">Favorties</Link>
-        </nav>
+       <NavBar />
         <main>
             <Outlet />
         </main>
         </>
-    )
+    );
 }

@@ -1,0 +1,35 @@
+@use '../../styles/variables.scss' as var;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var.$DarkBeige;
+
+    .navbar-logo {
+        height: 4rem;
+        width: 3.5rem;
+        margin-right: 1rem;    
+    }
+}
+
+.nav-link {
+    color: var.$DarkBrown;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    
+&.active {
+    color: var.$Brown;
+    text-decoration: underline;
+}
+}
