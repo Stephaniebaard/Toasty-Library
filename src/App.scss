@@ -1,11 +1,8 @@
 @use './styles/variables.scss' as var;
-nav a {
-    color: var.$Brown;
-    text-decoration: none; 
-    margin-right: 1rem;
-    font-weight: 500;
-}
 
-nav a:hover {
-    text-decoration: underline;
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var.$Beige;
 }
