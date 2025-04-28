@@ -1,7 +1,14 @@
 @use './variables.scss' as var;
 
-.Titel h1{
+.Title h1{
     font-family: 'Paytone one', sans-serif;
     font-weight: bold;
-    font-size: larger;
+    font-size: 5em;
+    color: var.$DarkBrown;
+    text-shadow: 1px 1px 2px rgb(110, 84, 45);
+    margin: 4rem;
+}
+
+.Title{
+
 }

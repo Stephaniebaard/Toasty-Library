@@ -1,0 +1,7 @@
+@use '../../../styles/variables.scss' as var;
+
+.searchbar-input {
+    background-color: var.$DarkBeige;
+    border: none;
+    padding: 0.5rem;
+}
