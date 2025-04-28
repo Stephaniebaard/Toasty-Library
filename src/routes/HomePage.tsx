@@ -1,3 +1,4 @@
+import GenreButtons from "../components/GenreButton/GenreButton";
 import SearchBar from "../components/NavBar/SearchBar/SearchBar";
 import "../styles/HomePage.scss";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
       <div className="Title">
         <h1>Toasty Library</h1>
         <SearchBar/>
+        <GenreButtons/>
       </div>
     );
   };
