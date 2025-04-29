@@ -9,7 +9,7 @@
 }
 
 .romantic-button {
-   @include mixin.genre-button-text;
+   @include mixin.genre-button;
    width: 47rem;
    height: 5rem;
    background-color: pink;
@@ -17,7 +17,7 @@
   }
   
   .horror-button {
-    @include mixin.genre-button-text;
+    @include mixin.genre-button;
     width: 45rem;
     height: 4rem;
     background-color: rgb(102, 30, 30);
@@ -25,7 +25,7 @@
   }
   
   .fantasy-button {
-    @include mixin.genre-button-text;
+    @include mixin.genre-button;
     width: 47rem;
     height: 5rem;
     background-color: rgb(48, 54, 90);
@@ -33,7 +33,7 @@
   }
   
   .thriller-button {
-    @include mixin.genre-button-text;
+    @include mixin.genre-button;
     width: 50rem;
     height: 5.5rem;
     background-color: rgb(161, 56, 56);
@@ -41,7 +41,7 @@
   }
   
   .science-fiction-button {
-    @include mixin.genre-button-text;
+    @include mixin.genre-button;
     width: 50rem;
     height: 5.8rem;
     background-color: rgb(37, 66, 57);
