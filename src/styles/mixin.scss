@@ -1,8 +1,14 @@
 @use '../styles/variables.scss' as var;
 
-@mixin genre-button-text {
+@mixin genre-button {
     color: var.$BookText;
     font-family: 'Paytone one', sans-serif;
     font-weight: bold;
     font-size: 2.4rem;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.85;
+        transform: scale(1.02);
+    }
 }
