@@ -1,6 +1,49 @@
+@use '../../styles/variables.scss' as var;
+@use '../../styles/mixin.scss'; 
 
 .button-container{
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    align-items: center;
 }
+
+.romantic-button {
+   @include mixin.genre-button-text;
+   width: 47rem;
+   height: 5rem;
+   background-color: pink;
+   border:none;
+  }
+  
+  .horror-button {
+    @include mixin.genre-button-text;
+    width: 45rem;
+    height: 4rem;
+    background-color: rgb(102, 30, 30);
+    border:none;
+  }
+  
+  .fantasy-button {
+    @include mixin.genre-button-text;
+    width: 47rem;
+    height: 5rem;
+    background-color: rgb(48, 54, 90);
+    border:none;
+  }
+  
+  .thriller-button {
+    @include mixin.genre-button-text;
+    width: 50rem;
+    height: 5.5rem;
+    background-color: rgb(161, 56, 56);
+    border:none;
+  }
+  
+  .science-fiction-button {
+    @include mixin.genre-button-text;
+    width: 50rem;
+    height: 5.8rem;
+    background-color: rgb(37, 66, 57);
+    border:none;
+  }
