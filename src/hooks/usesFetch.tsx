@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react"
-import {OpenLibraryResponse} from '../types/types';
+import { useEffect, useState } from "react";
 
-export const useFetch = (url:string) => {
-    const [data, setData] = useState<OpenLibraryResponse | null >(null);
-    const [loading, setLoading] = useState(true);
+export const useFetch = <T = unknown>(url: string) => {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        if (!url) return;
+  useEffect(() => {
+    if (!url) return;
 
-        fetch(url)
-        .then((res) => res.json())
-        .then((data:OpenLibraryResponse) => {
-            setData(data);
-            setLoading(false);
-        })
-        .catch(()=> setLoading(false));
-    }, [url]);
-    return { data, loading};
+    fetch(url)
+      .then((res) => res.json())
+      .then((json: T) => {
+        setData(json);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [url]);
+
+  return { data, loading };
 };
