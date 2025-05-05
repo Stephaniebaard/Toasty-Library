@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './GenreButton.scss';
 import { useBooksByGenre } from "../../hooks/useFetchBooksByGenre";
+import BookCard from "../BookCard/BookCard";
 
 const BooksBrowser = () => {
     const [selectedGenre, setSelectedGenre] = useState('');
@@ -18,12 +19,12 @@ const BooksBrowser = () => {
       <button onClick={() => handleGenreClick("Science Fiction")} className="science-fiction-button">Science Fiction</button>
 
       {loading && <p>Loading books...</p>}
-
-<ul>
-    {books.map((book) =>(
-       <li key={book.key}>{book.title}</li> 
-     ))}
-</ul>     
+      
+      <div className="book-grid">
+                {books.map((book) => (
+                    <BookCard key={book.key} book={book} />
+                ))}
+            </div> 
 
         </div>
         
