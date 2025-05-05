@@ -18,7 +18,7 @@ const BrowsePage = () => {
       <h1>Browse by Genre</h1>
       <div className="book-list">
         {genres.map((genre) => (
-          <div key={genre.genre}>
+          <div key={genre.name}>
             <GenreSection genre={genre.genre} />
           </div>
         ))}

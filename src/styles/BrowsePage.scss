@@ -3,8 +3,59 @@
     margin-top: 2rem;
 }
 
-.book-list{
+.book-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
+    flex-wrap: wrap;  
+    gap: 20px; 
+    justify-content: flex-start; 
+    margin-top: 20px;
+  }
+  
+ 
+  .book-list > div {
+    flex: 1 1 100%; 
+    min-width: 300px; 
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .book-list > div h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  
+  .book-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+  }
+  
+ 
+  .book-card {
+    flex: 1 1 100%; 
+    min-width: 200px; 
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  
+  .book-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .book-card h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .book-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
