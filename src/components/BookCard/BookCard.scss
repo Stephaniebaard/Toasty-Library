@@ -1,0 +1,43 @@
+@use '../../styles/variables.scss' as var;
+
+.book-link{
+    color: var.$DarkBrown;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1; 
+}
+.book-link:hover {
+    color: var.$Brown;
+    text-decoration: underline;
+}
+
+.book-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cover-wrapper {
+    position: relative;
+
+}
+
+.favorite-toast {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  
+    &.inactive {
+      opacity: 0.5;
+    }
+  
+    &.active {
+      opacity: 1;
+    }
+  }
