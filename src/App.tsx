@@ -6,6 +6,7 @@ import BrowsePage from "./routes/BrowsePage";
 import FavoritesPage from "./routes/FavoritesPage";
 import LibraryPage from "./routes/LibraryPage";
 import ItemDetailsPage from "./routes/ItemDetailsPage";
+import { FavoritesProvider } from "./context/FavoritesContext";
 
 function App() {
   const router = createBrowserRouter([
@@ -30,14 +31,19 @@ function App() {
         {
           path: "favorites",
           element: <FavoritesPage />,
-        }
+        },
+        {
+          path: "book/:id", 
+          element: <ItemDetailsPage />,
+        },
       ],
     },
   ]);
 
   return (
+    <FavoritesProvider>
     <RouterProvider router={router} />
-    
+    </FavoritesProvider>
   );
 }
 
