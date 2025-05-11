@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
-import ToastLogo from '../../../images/ToastLogo.png';
+import ToastLogo from '../../images/ToastLogo.png';
 
 const NavBar = () => {
     return (
