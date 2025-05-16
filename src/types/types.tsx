@@ -3,6 +3,7 @@ export type Book = {
     title: string;
     author_name?: string[];
     cover_id?: number;
+    description?: string | { value: string };
   };
 
   export interface OpenLibraryResponse {

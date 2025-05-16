@@ -2,10 +2,11 @@ import './SearchBar.scss';
 
 import React, { useState, useEffect } from 'react';
 import './SearchBar.scss';
+import { Book } from '../../../types/types';
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');
-  const [books, setBooks] = useState<any[]>([]); 
+  const [books, setBooks] = useState<Book[]>([]); 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -50,7 +51,7 @@ const SearchBar = () => {
             <h3>{book.title}</h3>
             <p>{book.author_name?.join(', ')}</p>
             <img
-              src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`}
+              src={`https://covers.openlibrary.org/b/id/${book.cover_id}-L.jpg`}
               alt={book.title}
             />
           </div>
