@@ -4,10 +4,14 @@ import "../styles/HomePage.scss";
 
 const HomePage = () => {
     return (
-      <div className="Title">
+      <div className="home-page">
+        <div className="left-block">
         <h1>Toasty Library</h1>
         <SearchBar/>
+        </div>
+       <div className="genre-buttons">
         <GenreButtons/>
+        </div>
       </div>
     );
   };

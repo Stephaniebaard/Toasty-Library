@@ -1,14 +1,38 @@
 @use './variables.scss' as var;
 
-.Title h1{
-    font-family: 'Paytone one', sans-serif;
-    font-weight: bold;
-    font-size: 5em;
-    color: var.$DarkBrown;
-    text-shadow: 1px 1px 2px rgb(110, 84, 45);
-    margin: 4rem;
+.home-page {
+  display: flex;
+  align-items: flex-start;  // toppen på h1 och genre-buttons ligger på samma linje
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.Title{
-
+.left-block {
+  display: flex;
+  flex-direction: column;  // h1 och sökbar staplas vertikalt
+  gap: 0.5rem;
+  margin-top: 6rem;
+  margin-left: 2rem;
+  padding: 1rem;
 }
+
+.genre-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 10rem;
+  margin-top: 8rem;
+}
+
+.searchbar {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.left-block > h1 {
+  font-size: 5rem;
+  color: var.$DarkBrown;
+}
+
