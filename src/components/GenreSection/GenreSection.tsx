@@ -1,6 +1,8 @@
 import { useFetch } from "../../hooks/usesFetch";
 import { OpenLibraryResponse, } from "../../types/types";
 import BookCard from "../BookCard/BookCard";
+import BookCarousel from "../BookCarousel/BookCarousel";
+import './GenreSection.scss';
 
 
 interface GenreSectionProps {
@@ -8,7 +10,7 @@ interface GenreSectionProps {
 }
 
 const GenreSection: React.FC<GenreSectionProps> = ({ genre }) => {
-  const url = `https://openlibrary.org/subjects/${genre}.json?limit=6`;
+  const url = `https://openlibrary.org/subjects/${genre}.json?limit=10`;
   const { data, loading } = useFetch<OpenLibraryResponse>(url);
   console.log(loading, data);  // Felsökning
   
@@ -16,14 +18,14 @@ const GenreSection: React.FC<GenreSectionProps> = ({ genre }) => {
   if (loading) return <div>Loading {genre} books...</div>;
   if (!data || !data.works) return <div>No books found for {genre}</div>;
 
-  return (
-    <div>
+   return (
+    <div className="genre-section">
       <h2>{genre.toUpperCase()}</h2>
-      <div className="book-grid">
-        {data.works.map((book) => (
-          <BookCard key={book.key} book={book} />
-        ))}
-      </div>
+      <BookCarousel
+        items={data.works}
+        renderItem={(book) => <BookCard key={book.key} book={book} />}
+        itemsPerPage={5}
+      />
     </div>
   );
 };
