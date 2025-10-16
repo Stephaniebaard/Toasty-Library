@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './GenreButton.scss';
 import { useBooksByGenre } from "../../hooks/useFetchBooksByGenre";
 import BookCard from "../BookCard/BookCard";
+import Carousel from "../BookCarousel/BookCarousel";
 
 const BooksBrowser = () => {
     const [selectedGenre, setSelectedGenre] = useState('');
@@ -20,11 +21,9 @@ const BooksBrowser = () => {
 
       {loading && <p>Loading books...</p>}
       
-      <div className="book-grid">
-                {books.map((book) => (
-                    <BookCard key={book.key} book={book} />
-                ))}
-            </div> 
+          <Carousel items={books} itemsPerPage={3} renderItem={(book) => (
+          <BookCard key={book.key} book={book} />
+      )} />
 
         </div>
         
