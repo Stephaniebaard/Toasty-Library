@@ -1,0 +1,90 @@
+.item-details {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+/* left column: cover + meta */
+.item-left {
+  display: flex;
+  flex-direction: column;
+  width: 360px; /* controls visible cover size */
+  min-width: 260px;
+}
+
+.cover-wrapper {
+  position: relative;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* favorite button overlay in the corner */
+.fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 6px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+.fav-btn.is-fav {
+  background: rgba(255,230,230,0.95);
+  color: #d63636;
+  border-color: rgba(214,54,54,0.2);
+}
+
+/* meta below cover */
+.meta {
+  margin-top: 1rem;
+}
+.title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+.author, .genres {
+  margin: 0.25rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* right column: description */
+.item-right {
+  flex: 1;
+  min-width: 240px;
+}
+.description {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 800px) {
+  .item-details {
+    flex-direction: column;
+  }
+  .item-left {
+    width: 100%;
+    min-width: auto;
+  }
+  .item-right {
+    width: 100%;
+  }
+}
