@@ -75,6 +75,44 @@
   color: #333;
 }
 
+/* rating using toast image as stars */
+.rating {
+  margin-top: 1rem;
+}
+.rating-stars {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.rating-star {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 120ms ease, opacity 120ms ease;
+  border-radius: 4px;
+}
+.rating-star:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.rating-star.active {
+  opacity: 1;
+  transform: scale(1.08);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.rating-value {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+/* ensure favorite-toast stays as previously styled */
+/* ...existing styles... */
+
 /* responsive: stack on small screens */
 @media (max-width: 800px) {
   .item-details {
